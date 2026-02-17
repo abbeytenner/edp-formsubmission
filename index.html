@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Registration Form v1.0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── MARQUEE HEADER ── -->
+  <div class="site-header">
+    <div class="marquee-bar">
+      <span class="marquee-inner">
+        ★ WELCOME TO THE STUDENT REGISTRATION PORTAL v1.0 ★ &nbsp;&nbsp;&nbsp;
+        PLEASE FILL OUT ALL REQUIRED FIELDS &nbsp;&nbsp;&nbsp;
+        ★ THIS SITE IS BEST VIEWED IN NETSCAPE NAVIGATOR 4.0 AT 800x600 ★ &nbsp;&nbsp;&nbsp;
+        ALL DATA IS STORED LOCALLY ON YOUR MACHINE &nbsp;&nbsp;&nbsp;
+      </span>
+    </div>
+  </div>
+
+  <!-- ── MAIN WINDOW ── -->
+  <div class="window">
+
+    <div class="title-bar">
+      <div class="title-bar-text">Student Registration — Personal Information</div>
+      <div class="title-bar-controls">
+        <div class="title-btn">_</div>
+        <div class="title-btn">□</div>
+        <div class="title-btn">✕</div>
+      </div>
+    </div>
+
+    <div class="window-body">
+
+      <div class="section-title">
+        PERSONAL INFORMATION <span class="blink">■</span>
+      </div>
+
+      <!-- BLOCK 1: Classification -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">CLASSIFICATION</span>
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label class="form-label">Student Type <span class="required-star">*</span></label>
+            <div class="select-wrapper">
+              <select class="form-select" id="studentType">
+                <option value="">-- Select Student Type --</option>
+                <option value="Regular">Regular</option>
+                <option value="Irregular">Irregular</option>
+                <option value="Transferee">Transferee</option>
+                <option value="Foreign">Foreign</option>
+                <option value="Cross-Enrollee">Cross-Enrollee</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-studentType">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Religion <span class="required-star">*</span></label>
+            <div class="select-wrapper">
+              <select class="form-select" id="religion">
+                <option value="">-- Select Religion --</option>
+                <option value="Roman Catholic">Roman Catholic</option>
+                <option value="Islam">Islam</option>
+                <option value="Iglesia ni Cristo">Iglesia ni Cristo</option>
+                <option value="Evangelical">Evangelical</option>
+                <option value="Born Again Christian">Born Again Christian</option>
+                <option value="Seventh-day Adventist">Seventh-day Adventist</option>
+                <option value="Buddhism">Buddhism</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-religion">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Civil Status <span class="required-star">*</span></label>
+            <div class="select-wrapper">
+              <select class="form-select" id="civilStatus">
+                <option value="">-- Select Civil Status --</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Separated">Separated</option>
+                <option value="Divorced">Divorced</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-civilStatus">This field is required.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 2: Full Name -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">FULL NAME</span>
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label class="form-label">First Name <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="firstName" placeholder="First name" />
+            <span class="error-msg" id="err-firstName">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Middle Name</label>
+            <input type="text" class="form-input" id="middleName" placeholder="Leave blank if none" />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Last Name <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="lastName" placeholder="Last name" />
+            <span class="error-msg" id="err-lastName">This field is required.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 3: Additional Details -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">ADDITIONAL DETAILS</span>
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label class="form-label">Suffix</label>
+            <input type="text" class="form-input" id="suffix" placeholder="Jr., Sr., II, etc." />
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Contact Number <span class="required-star">*</span></label>
+            <input type="tel" class="form-input" id="contactNumber" placeholder="e.g. 09273992923" />
+            <span class="error-msg" id="err-contactNumber">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Birthdate <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="birthdate" placeholder="MM-DD-YYYY" maxlength="10" />
+            <span class="error-msg" id="err-birthdate">This field is required.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 4: Demographics -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">DEMOGRAPHICS</span>
+        <div class="form-grid">
+
+          <div class="form-field">
+            <label class="form-label">Sex <span class="required-star">*</span></label>
+            <div class="select-wrapper">
+              <select class="form-select" id="sex">
+                <option value="">-- Select Sex --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-sex">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Email Address <span class="required-star">*</span></label>
+            <input type="email" class="form-input" id="email" placeholder="user@example.com" />
+            <span class="error-msg" id="err-email">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Nationality <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="nationality" placeholder="e.g. Filipino" />
+            <span class="error-msg" id="err-nationality">This field is required.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 5: Address -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">ADDRESS</span>
+        <div class="form-grid-2">
+
+          <div class="form-field">
+            <label class="form-label">Country <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="country" placeholder="e.g. Philippines" />
+            <span class="error-msg" id="err-country">This field is required.</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Complete Address <span class="required-star">*</span></label>
+            <input type="text" class="form-input" id="address" placeholder="House no., Street, City, Province" />
+            <span class="error-msg" id="err-address">This field is required.</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCK 6: Medical -->
+      <div class="fieldset-box">
+        <span class="fieldset-legend">MEDICAL</span>
+        <div style="max-width: 220px;">
+          <div class="form-field">
+            <label class="form-label">Blood Type <span class="required-star">*</span></label>
+            <div class="select-wrapper">
+              <select class="form-select" id="bloodType">
+                <option value="">-- Select Blood Type --</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <span class="error-msg" id="err-bloodType">This field is required.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--buttons-->
+    <div class="btn-row">
+      <button class="win-btn" id="resetBtn">Reset</button>
+      <button class="win-btn primary" id="submitBtn">▶ SUBMIT</button>
+    </div>
+
+    <!-- status bar -->
+    <div class="status-bar">
+      <div class="status-panel" id="statusText">Ready</div>
+      <div class="status-panel" style="flex:0 0 160px;">Fields: <span id="fieldCount">0 / 13</span></div>
+    </div>
+
+  </div>
+
+  <div class="footer-note">
+    ★ &nbsp; © 1999 Student Registration System &nbsp; ★ &nbsp; All Rights Reserved &nbsp; ★
+  </div>
+
+  <!-- success -->
+  <div class="dialog-overlay" id="successDialog">
+    <div class="dialog-window">
+      <div class="dialog-title-bar">
+        <div class="dialog-title-text">✔ Submission Complete</div>
+        <div class="title-btn" onclick="closeDialog()">✕</div>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-icon">💾</div>
+        <div class="dialog-message">Your data has been saved successfully!</div>
+        <div class="dialog-name" id="dialogName"></div>
+        <div class="dialog-message" style="font-size:15px;">Data stored in localStorage.<br>Have a nice day! ☺</div>
+        <div class="dialog-btn-row">
+          <button class="win-btn" onclick="closeDialog()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
